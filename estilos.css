@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #04AA6D;
+  color: white;
+}
+
+/* Incrementa el tamaño de la fuente del heading*/
+.header h1 {
+  font-size: 40px;
+}
+
+/* Estilos para la barra de navegación*/
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+}
+
+/* Estilos para los link que están dentro de barra de navegación */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Cambiar el color de los links cuando se pasa el mouse por encima */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+
+/* Link "activo" en la barra de navegación */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Estilo para el contenedor de los rows */
+.row {  
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+/* Sidebar/ columna izquierda */
+.side {
+  -ms-flex: 20%;
+  flex: 20%;
+  background-color: #404040;
+  color: #DDDDDD;
+  padding: 20px;
+  text-align: center;
+}
+
+.side a {
+  float: center;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.side li{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.side a:hover {
+  text-decoration: none;
+}
+
+
+/* Columna principal */
+.main {   
+  -ms-flex: 80%;
+  flex: 80%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+/* Estilo para el Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsividad, para que las columnas se apilen verticalmente en caso de que la pantalla sea de menos de 700 pixeles */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsividad, los links se apilan verticalmente en caso de que la pantalla sea menor a 400 pixeles*/
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Estilos para las imagenes */
+.imagen {
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Estilos para las secciones post donde están los artículos */
+.post {
+  text-align: center;
+  margin: 5rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* estilos para las table */
+table {
+  position: relative;
+  top:10%;
+  width: 100%;
+  text-align: center;
+  border: 1px solid;
+}
+
+/* estilos especificos para los td y th en las table */
+#experiencia {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#experiencia td, #experiencia th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#experiencia tr:nth-child(even){background-color: #f2f2f2;}
+
+#experiencia tr:hover {background-color: #ddd;}
+
+#experiencia th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+/* Estilos para las listas */
+ol {
+  list-style-position: inside;
+  padding: 0;
+  width: 100%;
+}
+
+.bodyLi {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+}
+
+
+
+/* Estilos para el Footer */
+#footer{
+  background: #404040;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px
+}
+
+#footer .footer-newsletter{
+  padding: 50px 0;background: #404040
+}
+
+#footer .footer-newsletter h4{
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600
+}
+
+#footer .footer-newsletter form{
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px
+}
+
+#footer .footer-newsletter form input[type="email"]{
+  border: 0;
+  padding: 8px;
+  width: calc(100% - 140px)
+}
+
+#footer .footer-newsletter form input[type="submit"]{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 30px;
+  margin: 3px;
+  background: #e96b56;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px
+}
+  
+#footer .footer-newsletter form input[type="submit"]:hover{
+  background: #e6573f
+}
+
+#footer .footer-top{
+  background: #3b3b3b;border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+  padding: 60px 0 30px 0
+}
+
+#footer .footer-top .footer-info{
+  margin-bottom: 30px
+}
+
+#footer .footer-top .footer-info h3{
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700
+}
+
+#footer .footer-top .footer-info p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff
+}
+
+#footer .footer-top .social-links a{
+  font-size: 18px;
+  display: inline-block;
+  background: #545454;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s
+}
+
+#footer .footer-top .social-links a:hover{
+  background: #e96b56;
+  color: #fff;
+  text-decoration: none
+}
+
+#footer .footer-top h4{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px
+}
+#footer .footer-top .footer-links{
+  margin-bottom: 30px
+}
+
+#footer .footer-top .footer-links ul{
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+#footer .footer-top .footer-links ul i{
+  padding-right: 2px;
+  color: #ec7f6d;
+  font-size: 18px;
+  line-height: 1
+}
+
+#footer .footer-top .footer-links ul li{
+  padding: 10px 0;
+  display: flex;
+  align-items: center
+}
+
+#footer .footer-top .footer-links ul li:first-child{
+  padding-top: 0
+}
+
+#footer .footer-top .footer-links ul a{
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1
+}
+
+#footer .footer-top .footer-links ul a:hover{
+  color: #e96b56
+}
+
+#footer .footer-top .footer-contact{
+  margin-bottom: 30px
+}
+
+#footer .footer-top .footer-contact p{
+  line-height: 26px
+}
+  
+#footer .copyright{
+  text-align: center;
+  padding-top: 30px
+}
+#footer .credits{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff
+}
+
+
+
+/* Estiliza el div con clase content que tiene dentro la información personal*/
+.content {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+  margin: 2rem 0;
+}
